@@ -23,7 +23,7 @@ module.exports = server => {
                 new errors.InvalidContentError("Expects 'application/json'")
             );
         }
-        // TODO: Here change the thingy
+        // TODO: Here change the functionality
 
         // Get the Entry properties from the Front End / Postman
         const { originalURL, miniURL, customName } = req.body;
