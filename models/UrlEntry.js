@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 const timestamp = require('mongoose-timestamp');
 
 const UrlEntrySchema = new mongoose.Schema({
+    _id: {
+        type: Number,
+        required: true
+    },
     originalURL: {
         type: String,
         required: true,
@@ -9,7 +13,7 @@ const UrlEntrySchema = new mongoose.Schema({
     },
     miniURL: {
         type: String,
-        required: true,
+        required: false,
         trim: true
     },
     customName: {

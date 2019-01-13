@@ -1,0 +1,31 @@
+ShortURLLogic = new function() {
+
+    const alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".split("");
+    const base = alphabet.length;
+
+    this.encodeOriginalURL = function (id) {
+        if (id === 0) {
+            return alphabet[0]
+        }
+
+        let miniURLPrefix = "";
+        while (id > 0) {
+            miniURLPrefix += alphabet[id % base];
+            id = parseInt((id / base).toString(), 10);
+        }
+
+        return miniURLPrefix.split("").reverse().join("");
+    };
+
+    this.decodeShortURL = function (miniURLSuffix) {
+        let id = 0;
+
+        for (let character = 0; character < miniURLSuffix.length; character++) {
+            id = id * base + alphabet.indexOf(miniURLSuffix[character]);
+        }
+
+        return id;
+    };
+};
+
+module.exports = ShortURLLogic;
