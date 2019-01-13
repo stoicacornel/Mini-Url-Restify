@@ -1,6 +1,6 @@
 Mini-URL-Restify
 ======
-In this App, the user is able to shorten URLs.
+In this App, the user is able to shorten URLs using Database mapping.
 
 Front-end not yet implemented.
 
