@@ -15,7 +15,7 @@ Limitations:
  - Due to the relative short length of the MiniURL, a User could Brute Force the MiniURLs.
  
 ## Version 
-* Version 1.0.0
+* Version 1.1.0
 
 ## How-to use this code
 * Fork and have fun.
