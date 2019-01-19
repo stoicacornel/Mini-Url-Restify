@@ -1,6 +1,6 @@
 ShortURLLogic = new function() {
 
-    const alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".split("");
+    const alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-".split("");
     const base = alphabet.length;
 
     this.encodeOriginalURL = function (id) {

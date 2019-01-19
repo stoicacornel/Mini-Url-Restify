@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const timestamp = require('mongoose-timestamp');
 
 const UrlEntrySchema = new mongoose.Schema({
     _id: {
@@ -19,10 +18,20 @@ const UrlEntrySchema = new mongoose.Schema({
     customName: {
         type: String,
         default: null
-    }
+    },
+    dateCreated: {
+        type: Number,
+        required: true
+    },
+    dateUpdated: {
+        type: Number,
+        required: true
+    },
+    lastDateAccessed: {
+        type: Number,
+        required: true
+    },
 });
-
-UrlEntrySchema.plugin(timestamp);
 
 const UrlEntry = mongoose.model('UrlEntry', UrlEntrySchema);
 module.exports = UrlEntry;
